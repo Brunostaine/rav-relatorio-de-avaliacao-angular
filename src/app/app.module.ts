@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home/home.component';
 import { CabecalhoComponent } from './components/cabecalho/cabecalho.component';
+import { ListaDeAlunosComponent } from './components/lista-de-alunos/lista-de-alunos.component';
 
 
 
@@ -15,11 +16,14 @@ import { CabecalhoComponent } from './components/cabecalho/cabecalho.component';
     AppComponent,
     HomeComponent,
     CabecalhoComponent,
+    ListaDeAlunosComponent,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
