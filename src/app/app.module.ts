@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home/home.component';
 import { CabecalhoComponent } from './components/cabecalho/cabecalho.component';
 import { ListaDeAlunosComponent } from './components/lista-de-alunos/lista-de-alunos.component';
+import { InfoAlunoComponent } from './components/info-aluno/info-aluno.component';
 
 
 
@@ -17,6 +18,7 @@ import { ListaDeAlunosComponent } from './components/lista-de-alunos/lista-de-al
     HomeComponent,
     CabecalhoComponent,
     ListaDeAlunosComponent,
+    InfoAlunoComponent,
 
   ],
   imports: [
