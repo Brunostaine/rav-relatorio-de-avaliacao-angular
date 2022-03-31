@@ -32,10 +32,11 @@ export class InfoAlunoComponent implements OnInit {
     })
   }
 
+  // Cria e cadastra o formulário do aluno.
   createUser() {
     this.userForm.get('id')?.patchValue(this.users.length + 1)
     this.userService.postUsers(this.userForm.value).subscribe(result => {
-      alert(`Usuário ${result.nomeAluno} foi cadastrado com sucesso!`)
+      alert('Aluno e formulário Cadastrado com sucesso!')
     })
   }
 
