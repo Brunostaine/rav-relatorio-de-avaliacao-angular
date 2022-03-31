@@ -1,4 +1,6 @@
+import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-lista-de-alunos',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista-de-alunos.component.css']
 })
 export class ListaDeAlunosComponent implements OnInit {
+  users: Array<User> = []; // Variável tipada com meu array de User da interface criada
 
-  constructor() { }
+  constructor (private UserService: UserService) { }
 
   ngOnInit(): void {
+    this.getUsers();
+  }
+
+  getUsers(): void {
+    this.UserService.getUsers().subscribe(response => {
+      this.users = response;
+    })
   }
 
 }

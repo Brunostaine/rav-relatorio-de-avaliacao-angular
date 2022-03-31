@@ -1,5 +1,6 @@
 export interface User {
     id?: number,
     nomeAluno: string,
-    pergunta: string
+    p1: string,
+    p2: string
 }
