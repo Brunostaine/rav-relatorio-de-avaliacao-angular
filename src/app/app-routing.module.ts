@@ -18,13 +18,18 @@ const routes: Routes = [
     component: ListaDeAlunosComponent
   },
   {
+    path: 'cadastro-form',
+    component: CadastroFormComponent
+  },
+  {
+    path: 'cadastro-form/:id',
+    component: CadastroFormComponent
+  },
+
+  {
     path: 'info-aluno',
     component: InfoAlunoComponent
   },
-  {
-    path: 'cadastro-form',
-    component: CadastroFormComponent
-  }
 ];
 
 @NgModule({

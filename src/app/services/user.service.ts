@@ -27,4 +27,19 @@ export class UserService {
   postUsers(user: User): Observable<User> {
     return this.HttpClient.post<User>(this.API, user, this.httpOptions)
   }
+
+  // deleta usuario 
+  deleteUser(id: number): Observable<User> {
+    return this.HttpClient.delete<User>(`${this.API}/id/${id}`)
+  }
+
+  // Edita usuário 
+  editUser(id: string, user: User): Observable<User> {
+    return this.HttpClient.put<User>(`${this.API}/id/${id}`, user, this.httpOptions)
+  }
+
+  // Lista usuário para edição
+  getUser(id: string): Observable<User[]> {
+    return this.HttpClient.get<User[]>(`${this.API}/id/${id}`)
+  }
 }

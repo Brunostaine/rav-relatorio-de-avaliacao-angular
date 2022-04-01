@@ -22,4 +22,12 @@ export class ListaDeAlunosComponent implements OnInit {
     })
   }
 
+  deleteUser(id: number): void {
+    this.UserService.deleteUser(id).subscribe( response => {
+      console.log('Usuario excluido com sucesso!')
+    }, () => {
+      this.getUsers()
+    })
+  }
+
 }
