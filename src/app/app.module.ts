@@ -9,6 +9,7 @@ import { CabecalhoComponent } from './components/cabecalho/cabecalho.component';
 import { ListaDeAlunosComponent } from './components/lista-de-alunos/lista-de-alunos.component';
 import { InfoAlunoComponent } from './components/info-aluno/info-aluno.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CadastroFormComponent } from './components/cadastro-form/cadastro-form.component';
 
 
 
@@ -21,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CabecalhoComponent,
     ListaDeAlunosComponent,
     InfoAlunoComponent,
+    CadastroFormComponent,
 
   ],
   imports: [

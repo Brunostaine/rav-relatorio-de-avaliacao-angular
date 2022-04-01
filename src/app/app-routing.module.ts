@@ -1,3 +1,4 @@
+import { CadastroFormComponent } from './components/cadastro-form/cadastro-form.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InfoAlunoComponent } from './components/info-aluno/info-aluno.component';
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'info-aluno',
     component: InfoAlunoComponent
+  },
+  {
+    path: 'cadastro-form',
+    component: CadastroFormComponent
   }
 ];
 
