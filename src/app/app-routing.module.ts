@@ -1,16 +1,16 @@
+import { ListaAlunosComponent } from './componentes/lista-alunos/lista-alunos.component';
+import { HomeComponent } from './home/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: '', pathMatch: 'full',
-    redirectTo: 'login'
-  },
-  {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
-  }
-];
+    {path: '', component: HomeComponent,
+  children: [
+    {path: '', component: ListaAlunosComponent}
+  ]
+},
+
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
