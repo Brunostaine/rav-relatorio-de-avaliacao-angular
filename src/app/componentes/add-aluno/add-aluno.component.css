@@ -1,0 +1,15 @@
+.div-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio-btn {
+  margin: 8px;
+  padding: 8px;
+}
+
+.display-btn{
+  margin: 8px;
+}

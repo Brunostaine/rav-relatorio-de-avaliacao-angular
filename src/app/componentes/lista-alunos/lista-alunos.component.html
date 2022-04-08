@@ -1,25 +1,27 @@
-<mat-card>
-  <mat-toolbar color="primary"> Lista de alunos </mat-toolbar>
+<mat-card >
+    <mat-toolbar color="primary" class="toobar-display"> Lista de alunos
+      <a routerLink="add-aluno" class="link-add">+</a>
+    </mat-toolbar>
 
-  <div *ngIf="list$ | async as lista; else spinner">
-    <table mat-table [dataSource]="lista" class="mat-elevation-z8">
-      <!-- name do aluno Column -->
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef>Nome do Aluno</th>
-        <td mat-cell *matCellDef="let list">{{ list.name }}</td>
-      </ng-container>
-      <!-- course da turma Column -->
-      <ng-container matColumnDef="course">
-        <th mat-header-cell *matHeaderCellDef>Turma</th>
-        <td mat-cell *matCellDef="let list">{{ list.course }}</td>
-      </ng-container>
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-    </table>
-  </div>
-  <ng-template #spinner>
-    <div class="spinner">
-      <mat-spinner></mat-spinner>
+    <div *ngIf="list$ | async as lista; else spinner">
+        <table mat-table [dataSource]="lista" class="mat-elevation-z8">
+          <!-- name do aluno Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef>Nome do Aluno</th>
+              <td mat-cell *matCellDef="let list">{{ list.name }}</td>
+            </ng-container>
+            <!-- course da turma Column -->
+            <ng-container matColumnDef="course">
+              <th mat-header-cell *matHeaderCellDef>Turma</th>
+              <td mat-cell *matCellDef="let list">{{ list.course }}</td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
     </div>
-  </ng-template>
+    <ng-template #spinner>
+      <div class="spinner">
+        <mat-spinner></mat-spinner>
+      </div>
+    </ng-template>
 </mat-card>

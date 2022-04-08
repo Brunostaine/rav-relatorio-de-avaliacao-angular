@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { delay, first, tap } from 'rxjs';
+import { first, tap } from 'rxjs';
 
 import { List } from './../../model/list';
 
@@ -16,7 +16,7 @@ export class ListaAlunosService {
     return this.httpClient.get<List[]>(this.API)
     .pipe(
       first(),
-      delay(5000),
+      // delay(5000), teste do tratamento de erro
       tap(list => console.log(list)))
   }
 }

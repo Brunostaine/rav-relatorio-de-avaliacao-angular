@@ -1,0 +1,29 @@
+<mat-card>
+  <mat-toolbar color="primary">
+    <span>Criar Relatório</span>
+  </mat-toolbar>
+</mat-card>
+
+<mat-card>
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Nome do Aluno</mat-label>
+      <input type="name" matInput placeholder="Ex. João da Silva" />
+    </mat-form-field>
+  </form>
+
+  <form class="example-form">
+    <mat-label style="font-weight: 700">Pergunta que iremos fazer</mat-label>
+    <div>
+      <mat-radio-group aria-label="selecione uma opção">
+        <mat-radio-button class="radio-btn" value="1" style="margin-right: 16px;">Sim</mat-radio-button>
+        <mat-radio-button class="radio-btn" value="2">Não</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </form>
+
+  <div class="example-button-row">
+    <button class="display-btn" mat-raised-button color="primary" type="submit">Enviar</button>
+    <button class="display-btn" mat-raised-button color="warn">Cancelar</button>
+  </div>
+</mat-card>
