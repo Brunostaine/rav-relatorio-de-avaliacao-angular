@@ -1,11 +1,10 @@
-import { ListaAlunosModule } from './../../componentes/lista-alunos/lista-alunos.module';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
+import { ListaAlunosModule } from './../../componentes/lista-alunos/lista-alunos.module';
+import { AppMaterialModule } from './../../shared/app-material/app-material.module';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -13,8 +12,7 @@ import { MatCardModule } from '@angular/material/card';
     CommonModule,
     HomeRoutingModule,
     ListaAlunosModule,
-    MatToolbarModule,
-    MatCardModule,
+    AppMaterialModule
   ],
 })
 export class HomeModule {}

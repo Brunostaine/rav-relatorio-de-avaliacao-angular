@@ -1,23 +1,22 @@
-import { HomeModule } from './home/home/home.module';
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListaAlunosComponent } from './componentes/lista-alunos/lista-alunos.component';
-
+import { HomeModule } from './home/home/home.module';
+import { AppMaterialModule } from './shared/app-material/app-material.module';
 
 @NgModule({
   declarations: [AppComponent, ListaAlunosComponent],
   imports: [
-    BrowserModule,
+
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule, // para usar o serviço
-
-    HomeModule
+    HomeModule,
+    CommonModule,
+    AppMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent],
