@@ -1,0 +1,18 @@
+{
+  "perguntas": [
+    {
+      "id": 1, "p1": "O aluno consegue se apresentar?"
+    },
+    {
+      "id": 2,"p2": "O aluno é capaz de apresentar terceiros?"
+    },
+    {
+      "id": 3,"p3": "O aluno é capaz de expressar gostos pessoais?"
+    }
+  ]
+}
+
+
+
+
+
