@@ -9,12 +9,12 @@ import { AddAlunoService } from './service/add-aluno.service';
   styleUrls: ['./add-aluno.component.css'],
 })
 export class AddAlunoComponent implements OnInit {
-  listar: Questoes[] = []
+  listar = [];
 
   constructor(private addAlunoService: AddAlunoService) {
+    this.addAlunoService.listarQuestoes().subscribe(result => this.listar = result)
   }
 
   ngOnInit(): void {
-    this.addAlunoService.listarQuestoes().subscribe(result => this.listar = result)
   }
 }
