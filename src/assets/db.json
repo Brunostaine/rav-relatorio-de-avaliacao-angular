@@ -1,11 +1,12 @@
 [
   {
-    "p1": "O aluno consegue se apresentar?"
+    "pergunta": "O aluno consegue se apresentar?",
+    "resposta": "Sim"
   },
   {
-    "p2": "O aluno é capaz de apresentar terceiros?"
+    "pergunta": "O aluno é capaz de apresentar terceiros?"
   },
   {
-    "p3": "O aluno é capaz de expressar gostos pessoais?"
+    "pergunta": "O aluno é capaz de expressar gostos pessoais?"
   }
 ]
