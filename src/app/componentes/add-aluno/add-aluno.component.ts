@@ -10,28 +10,22 @@ export class AddAlunoComponent implements OnInit {
   listar = [] as any;
   isLoading = false;
 
-  constructor(private addAlunoService: AddAlunoService) { }
+  constructor(private addAlunoService: AddAlunoService) {}
 
   ngOnInit(): void {
-
-
     this.isLoading = true;
     this.addAlunoService.listarQuestoes().subscribe({
-      next: resp => {
-
+      next: (resp) => {
         this.listar = resp;
       },
-      error: err => {
-        console.error(err)
+      error: (err) => {
+        console.error(err);
       },
       complete: () => {
         setTimeout(() => {
           this.isLoading = false;
-        }, 500)
-      }
+        }, 500);
+      },
     });
-
   }
-
-
 }

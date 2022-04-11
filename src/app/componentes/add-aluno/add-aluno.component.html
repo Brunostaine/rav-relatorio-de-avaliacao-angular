@@ -4,44 +4,29 @@
   </mat-toolbar>
 </mat-card>
 <mat-card>
-  
-  
-<ng-container *ngIf="!isLoading else LoadingTemplate">
-  
-  <form class="example-form">
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Nome do Aluno</mat-label>
-      <input type="name" matInput placeholder="Ex. João da Silva" />
-    </mat-form-field>
-  </form>
+  <ng-container *ngIf="!isLoading; else LoadingTemplate">
+    <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nome do Aluno</mat-label>
+        <input type="name" matInput placeholder="Ex. João da Silva" />
+      </mat-form-field>
+    </form>
 
-  <!-- <form class="example-form" *ngFor="let lista of listar">
-    <mat-label style="font-weight: 700"> {{ lista.perguntas }}</mat-label>
-    <div>
-      <mat-radio-group aria-label="selecione uma opção">
-        <mat-radio-button class="radio-btn" value="1" style="margin-right: 16px"
-          >Sim</mat-radio-button
-        >
-        <mat-radio-button class="radio-btn" value="2">Não</mat-radio-button>
-      </mat-radio-group>
-    </div>
-  </form> -->
-  
-  <table *ngFor="let lista of listar">
-    <thead>
-      <th>Questionário</th>
-      <th>Respostas</th>
-    </thead>
-    <tbody>
-      <td>{{ lista.pergunta }}</td>
-      <!-- <td>Sim</td> -->
-
-      <div *ngIf="lista?.resposta">
-        {{ lista.resposta }}
+    <form class="example-form" *ngFor="let lista of listar">
+      <mat-label style="font-weight: 700"> {{ lista.pergunta }}</mat-label>
+      <div>
+        <mat-radio-group aria-label="selecione uma opção">
+          <mat-radio-button
+            class="radio-btn"
+            value="1"
+            style="margin-right: 16px"
+            >Sim</mat-radio-button
+          >
+          <mat-radio-button class="radio-btn" value="2">Não</mat-radio-button>
+        </mat-radio-group>
       </div>
-    </tbody>
-  </table>
-</ng-container>
+    </form>
+  </ng-container>
 
   <div class="example-button-row">
     <button class="display-btn" mat-raised-button color="primary" type="submit">
@@ -49,9 +34,6 @@
     </button>
     <button class="display-btn" mat-raised-button color="warn">Cancelar</button>
   </div>
-
 </mat-card>
 
-<ng-template #LoadingTemplate>
-  carregando ...
-</ng-template>
+<ng-template #LoadingTemplate> carregando ... </ng-template>
