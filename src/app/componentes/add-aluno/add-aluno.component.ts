@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
-import { Questoes } from '../model/questoes';
 import { AddAlunoService } from './service/add-aluno.service';
 
 @Component({
@@ -9,12 +7,31 @@ import { AddAlunoService } from './service/add-aluno.service';
   styleUrls: ['./add-aluno.component.css'],
 })
 export class AddAlunoComponent implements OnInit {
-  listar = [];
+  listar = [] as any;
+  isLoading = false;
 
-  constructor(private addAlunoService: AddAlunoService) {
-    this.addAlunoService.listarQuestoes().subscribe(result => this.listar = result)
-  }
+  constructor(private addAlunoService: AddAlunoService) { }
 
   ngOnInit(): void {
+
+
+    this.isLoading = true;
+    this.addAlunoService.listarQuestoes().subscribe({
+      next: resp => {
+
+        this.listar = resp;
+      },
+      error: err => {
+        console.error(err)
+      },
+      complete: () => {
+        setTimeout(() => {
+          this.isLoading = false;
+        }, 500)
+      }
+    });
+
   }
+
+
 }

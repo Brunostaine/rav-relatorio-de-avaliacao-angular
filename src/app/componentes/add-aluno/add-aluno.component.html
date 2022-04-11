@@ -3,12 +3,11 @@
     <span>Criar Relatório</span>
   </mat-toolbar>
 </mat-card>
-
 <mat-card>
-
-
-
-
+  
+  
+<ng-container *ngIf="!isLoading else LoadingTemplate">
+  
   <form class="example-form">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Nome do Aluno</mat-label>
@@ -27,17 +26,22 @@
       </mat-radio-group>
     </div>
   </form> -->
-
+  
   <table *ngFor="let lista of listar">
     <thead>
       <th>Questionário</th>
       <th>Respostas</th>
     </thead>
     <tbody>
-      <td>{{ lista }}</td>
-      <td>Sim</td>
+      <td>{{ lista.pergunta }}</td>
+      <!-- <td>Sim</td> -->
+
+      <div *ngIf="lista?.resposta">
+        {{ lista.resposta }}
+      </div>
     </tbody>
   </table>
+</ng-container>
 
   <div class="example-button-row">
     <button class="display-btn" mat-raised-button color="primary" type="submit">
@@ -48,3 +52,6 @@
 
 </mat-card>
 
+<ng-template #LoadingTemplate>
+  carregando ...
+</ng-template>
