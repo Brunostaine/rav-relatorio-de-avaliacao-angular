@@ -19,4 +19,8 @@ export class ListaAlunosService {
       // delay(5000), teste do tratamento de erro
       tap(list => console.log(list)))
   }
+
+  editarAluno(){
+    console.log('editando um aluno')
+  }
 }

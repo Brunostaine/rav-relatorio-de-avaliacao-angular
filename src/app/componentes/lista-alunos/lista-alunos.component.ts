@@ -18,20 +18,25 @@ export class ListaAlunosComponent implements OnInit {
 
   constructor(
     private listaAlunosService: ListaAlunosService,
-    public dialog: MatDialog) {
-    this.list$ = this.listaAlunosService.list()
-    .pipe(
-      catchError(error => {
-        this.onError('Erro ao carregar lista de alunos')
-        return of([])
-      })
-      )
-   }
+    public dialog: MatDialog) 
+    {this.list$ = this.listaAlunosService.list()
+      .pipe(
+        catchError(error => {
+          this.onError('Erro ao carregar lista de alunos')
+          return of([])
+        })
+        )}
+
+   
 
    onError(errorMsg: string) {
     this.dialog.open(ErrorDialogComponent, {
       data: errorMsg,
     });
+  }
+
+  edit(){
+    this.listaAlunosService.editarAluno()
   }
 
   ngOnInit(): void {

@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card class="teste">
   <mat-toolbar color="primary">
     <span>Criar Relatório</span>
   </mat-toolbar>
@@ -32,7 +32,7 @@
     <button class="display-btn" mat-raised-button color="primary" type="submit">
       Enviar
     </button>
-    <button class="display-btn" mat-raised-button color="warn">Cancelar</button>
+    <button class="display-btn" mat-raised-button color="warn" (click)="onCancel()">Cancelar</button>
   </div>
 </mat-card>
 

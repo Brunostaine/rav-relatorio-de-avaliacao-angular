@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AddAlunoService } from './service/add-aluno.service';
 
 @Component({
@@ -10,7 +12,7 @@ export class AddAlunoComponent implements OnInit {
   listar = [] as any;
   isLoading = false;
 
-  constructor(private addAlunoService: AddAlunoService) {}
+  constructor(private addAlunoService: AddAlunoService, private router: Router) {}
 
   ngOnInit(): void {
     this.isLoading = true;
@@ -27,5 +29,9 @@ export class AddAlunoComponent implements OnInit {
         }, 500);
       },
     });
+  }
+
+  onCancel(){
+    this.router.navigate([''])
   }
 }
