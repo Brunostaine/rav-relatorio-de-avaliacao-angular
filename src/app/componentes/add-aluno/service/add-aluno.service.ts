@@ -6,10 +6,15 @@ import { Injectable } from '@angular/core';
 })
 export class AddAlunoService {
   private readonly API = 'assets/db.json';
+  private readonly TURMA = 'assets/turmas.json'
 
   constructor(private HttpClient: HttpClient) {}
 
   listarQuestoes() {
     return this.HttpClient.get<any>(this.API);
+  }
+
+  listarTurmas(){
+    return this.HttpClient.get<any>(this.TURMA)
   }
 }

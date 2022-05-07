@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+
 import { AddAlunoService } from './service/add-aluno.service';
 
 @Component({
@@ -11,8 +12,12 @@ import { AddAlunoService } from './service/add-aluno.service';
 export class AddAlunoComponent implements OnInit {
   listar = [] as any;
   isLoading = false;
+  turmas: any ;
 
   constructor(private addAlunoService: AddAlunoService, private router: Router) {}
+
+  // Formulario reativo
+  formulario!: FormGroup;
 
   ngOnInit(): void {
     this.isLoading = true;
@@ -29,6 +34,18 @@ export class AddAlunoComponent implements OnInit {
         }, 500);
       },
     });
+
+    
+    this.addAlunoService.listarTurmas().subscribe({
+      next: (resp) => {
+        this.turmas = resp
+      }
+    })
+      
+  }
+
+  onGerar(){
+    
   }
 
   onCancel(){

@@ -17,10 +17,11 @@ export class ListaAlunosService {
     .pipe(
       first(),
       // delay(5000), teste do tratamento de erro
-      tap(list => console.log(list)))
+      tap())
   }
 
   editarAluno(){
     console.log('editando um aluno')
   }
+  
 }

@@ -1,23 +1,26 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AddAlunoModule } from './componentes/add-aluno/add-aluno.module';
 import { ListaAlunosComponent } from './componentes/lista-alunos/lista-alunos.component';
 import { HomeModule } from './home/home/home.module';
 import { AppMaterialModule } from './shared/app-material/app-material.module';
-import { AddAlunoComponent } from './componentes/add-aluno/add-aluno.component';
 
 @NgModule({
-  declarations: [AppComponent, ListaAlunosComponent, AddAlunoComponent],
+  declarations: [AppComponent, ListaAlunosComponent, ],
   imports: [
 
     AppRoutingModule,
     HttpClientModule,
     HomeModule,
     CommonModule,
-    AppMaterialModule
+    AppMaterialModule,
+    ReactiveFormsModule,
+    AddAlunoModule
   ],
   providers: [],
   bootstrap: [AppComponent],

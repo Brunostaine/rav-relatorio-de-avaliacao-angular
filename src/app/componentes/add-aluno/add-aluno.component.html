@@ -1,39 +1,62 @@
 <mat-card class="teste">
   <mat-toolbar color="primary">
-    <span>Criar Relatório</span>
+    <span>Gerar novo formulário</span>
   </mat-toolbar>
 </mat-card>
-<mat-card>
-  <ng-container *ngIf="!isLoading; else LoadingTemplate">
-    <form class="example-form">
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Nome do Aluno</mat-label>
-        <input type="name" matInput placeholder="Ex. João da Silva" />
-      </mat-form-field>
-    </form>
 
-    <form class="example-form" *ngFor="let lista of listar">
-      <mat-label style="font-weight: 700"> {{ lista.pergunta }}</mat-label>
-      <div>
-        <mat-radio-group aria-label="selecione uma opção">
-          <mat-radio-button
-            class="radio-btn"
-            value="1"
-            style="margin-right: 16px"
-            >Sim</mat-radio-button
-          >
-          <mat-radio-button class="radio-btn" value="2">Não</mat-radio-button>
-        </mat-radio-group>
+<!-- Nome e Turma -->
+
+<form>
+  <div class="container my-3">
+    <div class="row">
+      <div class="col my-2">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="First name"
+          aria-label="First name"
+        />
       </div>
-    </form>
-  </ng-container>
+      <div class="col my-2">
+        <select *ngFor="let turma of turmas" class="form-select" aria-label="Default select example">
+          
+          <option >{{ turma.turma }}</option>
+          
+        </select>
+      </div>
 
-  <div class="example-button-row">
-    <button class="display-btn" mat-raised-button color="primary" type="submit">
-      Enviar
-    </button>
-    <button class="display-btn" mat-raised-button color="warn" (click)="onCancel()">Cancelar</button>
+      <!-- Perguntas do Formulário -->
+
+      <div class="example-form" *ngFor="let lista of listar">
+        <div class="form-control">
+          <mat-label style="font-weight: 700"> {{ lista.pergunta }}</mat-label>
+          <div>
+            <mat-radio-group aria-label="selecione uma opção">
+              <mat-radio-button
+                class="radio-btn"
+                value="1"
+                style="margin-right: 16px"
+                >Sim</mat-radio-button
+              >
+              <mat-radio-button class="radio-btn" value="2"
+                >Não</mat-radio-button
+              >
+            </mat-radio-group>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</mat-card>
+  <div class="container">
+    <div class="float-end ">
+      <button type="button" class="btn btn-outline-success mx-2" (click)="onGerar()">Gerar</button>
+      <button type="button" class="btn btn-outline-danger" (click)="onCancel()">Cancelar</button>
+    </div>
+  </div>
+  
+
+</form>
+
+
 
 <ng-template #LoadingTemplate> carregando ... </ng-template>
