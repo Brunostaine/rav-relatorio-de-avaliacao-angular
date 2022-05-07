@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { AddAlunoService } from './service/add-aluno.service';
@@ -60,7 +60,7 @@ export class AddAlunoComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.formulario)
+    console.log(this.formulario.value)
 
     this.addAlunoService.SubmitFormulario(this.formulario.value).subscribe()
   }

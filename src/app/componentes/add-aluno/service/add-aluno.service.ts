@@ -7,8 +7,8 @@ import { take } from 'rxjs';
 })
 export class AddAlunoService {
   private readonly API = 'assets/db.json';
-  private readonly TURMA = 'assets/turmas.json'
-  private readonly FORM = 'assets/list.json'
+  private readonly TURMA = 'assets/turmas.json';
+  private readonly FORM = 'assets/list.json';
 
   constructor(private HttpClient: HttpClient) {}
 
