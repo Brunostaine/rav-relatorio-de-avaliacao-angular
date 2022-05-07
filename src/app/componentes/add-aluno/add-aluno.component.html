@@ -6,22 +6,28 @@
 
 <!-- Nome e Turma -->
 
-<form>
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
   <div class="container my-3">
     <div class="row">
       <div class="col my-2">
         <input
           type="text"
           class="form-control"
-          placeholder="First name"
-          aria-label="First name"
+          formControlName="nome"
+          placeholder="Nome do Aluno"
+          aria-label="Nome do Aluno"
         />
       </div>
+
       <div class="col my-2">
-        <select *ngFor="let turma of turmas" class="form-select" aria-label="Default select example">
-          
-          <option >{{ turma.turma }}</option>
-          
+        <select
+          *ngFor="let turma of turmas"
+          class="form-select"
+          aria-label="Default select example"
+          formControlName="turma"
+        >
+          <option disabled>Selecione uma turma</option>
+          <option class="form-control">{{ turma.turma }}</option>
         </select>
       </div>
 
@@ -48,15 +54,13 @@
     </div>
   </div>
   <div class="container">
-    <div class="float-end ">
-      <button type="button" class="btn btn-outline-success mx-2" (click)="onGerar()">Gerar</button>
-      <button type="button" class="btn btn-outline-danger" (click)="onCancel()">Cancelar</button>
+    <div class="float-end">
+      <button type="submit" class="btn btn-outline-success mx-2">Submit</button>
+      <button type="button" class="btn btn-outline-danger" (click)="onCancel()">
+        Cancelar
+      </button>
     </div>
   </div>
-  
-
 </form>
-
-
 
 <ng-template #LoadingTemplate> carregando ... </ng-template>

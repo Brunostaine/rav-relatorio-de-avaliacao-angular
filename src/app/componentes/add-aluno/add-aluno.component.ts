@@ -1,5 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { AddAlunoService } from './service/add-aluno.service';
@@ -12,14 +13,29 @@ import { AddAlunoService } from './service/add-aluno.service';
 export class AddAlunoComponent implements OnInit {
   listar = [] as any;
   isLoading = false;
-  turmas: any ;
+  turmas: any;
 
-  constructor(private addAlunoService: AddAlunoService, private router: Router) {}
+  constructor(
+    private addAlunoService: AddAlunoService,
+    private router: Router,
+    private fb: FormBuilder,
+    private http: HttpClient
+  ) {}
 
   // Formulario reativo
   formulario!: FormGroup;
 
   ngOnInit(): void {
+    // Formulario
+
+    this.formulario = this.fb.group({
+      nome: [null],
+      turma: [null],
+
+      
+    })
+
+    // Lista as questões
     this.isLoading = true;
     this.addAlunoService.listarQuestoes().subscribe({
       next: (resp) => {
@@ -35,20 +51,22 @@ export class AddAlunoComponent implements OnInit {
       },
     });
 
-    
+    // Lista as turmas
     this.addAlunoService.listarTurmas().subscribe({
       next: (resp) => {
-        this.turmas = resp
-      }
-    })
-      
+        this.turmas = resp;
+      },
+    });
   }
 
-  onGerar(){
-    
-  }
+  onSubmit() {
+    console.log(this.formulario)
 
-  onCancel(){
-    this.router.navigate([''])
+    this.addAlunoService.SubmitFormulario(this.formulario.value).subscribe()
+  }
+  
+
+  onCancel(): void {
+    this.router.navigate(['']);
   }
 }
