@@ -8,25 +8,16 @@ import { ListaAlunosService } from './service/lista-alunos.service';
   styleUrls: ['./lista-alunos.component.css'],
 })
 export class ListaAlunosComponent implements OnInit {
-
   listar: any;
 
   constructor(private listaAlunosService: ListaAlunosService) {}
 
-  
-
- 
-  
-
   ngOnInit(): void {
-
-    
-      this.listaAlunosService.list().subscribe( {
-        next: (resp)=> {
-          this.listar = resp;
-          console.log(resp)
-        }
-      })
-    
+    this.listaAlunosService.list().subscribe({
+      next: (resp) => {
+        this.listar = resp;
+        // console.log(resp)
+      },
+    });
   }
 }

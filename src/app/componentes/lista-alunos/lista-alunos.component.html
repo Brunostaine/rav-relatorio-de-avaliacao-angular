@@ -10,7 +10,7 @@
     </button>
   </mat-toolbar>
 
-  <table class="table" >
+  <table class="table">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -20,8 +20,8 @@
       </tr>
     </thead>
 
-    <tbody *ngFor="let lista of listar">
-      <tr>
+    <tbody>
+      <tr *ngFor="let lista of listar">
         <th scope="row">{{ lista.id }}</th>
         <td>{{ lista.nome }}</td>
         <td>{{ lista.turma }}</td>
