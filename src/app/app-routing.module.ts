@@ -3,20 +3,23 @@ import { HomeComponent } from './home/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddAlunoComponent } from './componentes/add-aluno/add-aluno.component';
+import { AlunoFormComponent } from './componentes/aluno-form/aluno-form.component';
 
 const routes: Routes = [
-    {path: '', component: HomeComponent,
-  children: [
-    {path: '', component: ListaAlunosComponent},
-    
-    {path: 'add-aluno', component: AddAlunoComponent}
-  ]
-},
+  {
+    path: '',
+    component: HomeComponent,
+    children: [
+      { path: '', component: ListaAlunosComponent },
 
-]
+      { path: 'add-aluno', component: AddAlunoComponent },
+      { path: 'form', component: AlunoFormComponent },
+    ],
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

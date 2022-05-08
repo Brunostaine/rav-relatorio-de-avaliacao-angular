@@ -9,9 +9,10 @@ import { AddAlunoModule } from './componentes/add-aluno/add-aluno.module';
 import { ListaAlunosComponent } from './componentes/lista-alunos/lista-alunos.component';
 import { HomeModule } from './home/home/home.module';
 import { AppMaterialModule } from './shared/app-material/app-material.module';
+import { AlunoFormComponent } from './componentes/aluno-form/aluno-form.component';
 
 @NgModule({
-  declarations: [AppComponent, ListaAlunosComponent, ],
+  declarations: [AppComponent, ListaAlunosComponent, AlunoFormComponent, ],
   imports: [
 
     AppRoutingModule,

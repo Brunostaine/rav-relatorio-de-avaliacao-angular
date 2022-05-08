@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { ListaAlunosService } from './service/lista-alunos.service';
 
@@ -10,7 +11,7 @@ import { ListaAlunosService } from './service/lista-alunos.service';
 export class ListaAlunosComponent implements OnInit {
   listar: any;
 
-  constructor(private listaAlunosService: ListaAlunosService) {}
+  constructor(private listaAlunosService: ListaAlunosService, private router: Router) {}
 
   ngOnInit(): void {
     this.listaAlunosService.list().subscribe({
@@ -19,5 +20,9 @@ export class ListaAlunosComponent implements OnInit {
         // console.log(resp)
       },
     });
+  }
+
+  verRelatorio(){
+    this.router.navigate(['/form'])
   }
 }
