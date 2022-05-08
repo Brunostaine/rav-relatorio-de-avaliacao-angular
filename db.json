@@ -44,20 +44,25 @@
       "nome": "BRUNO",
       "turma": "8a",
       "id": 4
+    },
+    {
+      "nome": "Ana beatriz",
+      "turma": "8B",
+      "id": 5
     }
   ],
   "turmas": [
     {
       "id": 1,
-      "turma": "8a"
+      "turma": "8A"
     },
     {
       "id": 2,
-      "turma": "8b"
+      "turma": "8B"
     },
     {
       "id": 3,
-      "turma": "8c"
+      "turma": "8C"
     }
   ]
 }

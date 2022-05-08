@@ -21,13 +21,14 @@
 
       <div class="col my-2">
         <select
-          *ngFor="let turma of turmas"
           class="form-select"
-          aria-label="Default select example"
+          aria-label="Turma"
           formControlName="turma"
         >
-          <option disabled>Selecione uma turma</option>
-          <option class="form-control">{{ turma.turma }}</option>
+        
+          <option *ngFor="let turma of turmas" class="form-control" >
+            {{ turma.turma }}
+          </option>
         </select>
       </div>
 
