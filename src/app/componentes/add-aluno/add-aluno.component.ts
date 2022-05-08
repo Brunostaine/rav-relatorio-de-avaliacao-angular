@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 import { AddAlunoService } from './service/add-aluno.service';
 
@@ -11,6 +12,7 @@ import { AddAlunoService } from './service/add-aluno.service';
   styleUrls: ['./add-aluno.component.css'],
 })
 export class AddAlunoComponent implements OnInit {
+
   listar = [] as any;
   isLoading = false;
   turmas: any;

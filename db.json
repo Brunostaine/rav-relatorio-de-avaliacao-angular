@@ -1,19 +1,63 @@
 {
-  "posts": [
+  "usuarios": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "usuario": "admin",
+      "senha": "admin"
     }
   ],
-  "comments": [
+  "perguntas": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "pergunta": "O aluno sabe ler e escrever?"
+    },
+    {
+      "id": 2,
+      "pergunta": "O aluno gosta de frutas?"
+    },
+    {
+      "id": 3,
+      "pergunta": "O aluno sabe ler inglês?"
+    },
+    {
+      "pergunta": "O aluno sabe ler CHINÊS?",
+      "id": 4
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "Alunos": [
+    {
+      "id": 1,
+      "nome": "Maria Joaquina",
+      "turma": "8A"
+    },
+    {
+      "id": 2,
+      "nome": "João da Silva",
+      "turma": "8A"
+    },
+    {
+      "id": 3,
+      "nome": "Mario Alcantara",
+      "turma": "8B"
+    },
+    {
+      "nome": "BRUNO",
+      "turma": "8a",
+      "id": 4
+    }
+  ],
+  "turmas": [
+    {
+      "id": 1,
+      "turma": "8a"
+    },
+    {
+      "id": 2,
+      "turma": "8b"
+    },
+    {
+      "id": 3,
+      "turma": "8c"
+    }
+  ]
 }

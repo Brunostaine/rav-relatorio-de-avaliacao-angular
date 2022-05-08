@@ -8,7 +8,7 @@ import { List } from './../../model/list';
   providedIn: 'root',
 })
 export class ListaAlunosService {
-  private readonly API = 'assets/list.json';
+  private readonly API = 'http://localhost:3000/Alunos';
 
   constructor(private httpClient: HttpClient) {}
 

@@ -15,14 +15,14 @@
       <!-- name do aluno Column -->
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef>Nome do Aluno</th>
-        <td mat-cell *matCellDef="let list" (click)="edit()">{{ list.name }}</td>
+        <td mat-cell *matCellDef="let list" (click)="edit()">{{ list.nome }}</td>
       </ng-container>
       <!-- course da turma Column -->
       
 
       <ng-container matColumnDef="course">
         <th mat-header-cell *matHeaderCellDef>Turma</th>
-        <td mat-cell *matCellDef="let list">{{ list.course }}</td>
+        <td mat-cell *matCellDef="let list">{{ list.turma }}</td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

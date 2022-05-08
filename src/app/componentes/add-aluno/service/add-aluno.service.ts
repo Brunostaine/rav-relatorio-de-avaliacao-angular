@@ -6,9 +6,9 @@ import { take } from 'rxjs';
   providedIn: 'root',
 })
 export class AddAlunoService {
-  private readonly API = 'assets/db.json';
-  private readonly TURMA = 'assets/turmas.json';
-  private readonly FORM = 'assets/list.json';
+  private readonly API = 'http://localhost:3000/perguntas';
+  private readonly TURMA = 'http://localhost:3000/turmas';
+  private readonly FORM = 'http://localhost:3000/Alunos';
 
   constructor(private HttpClient: HttpClient) {}
 

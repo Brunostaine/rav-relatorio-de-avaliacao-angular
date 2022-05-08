@@ -1,0 +1,11 @@
+http://localhost:3000/perguntas
+
+###
+
+POST http://localhost:3000/perguntas HTTP/1.1
+content-type: application/json
+
+{
+      
+      "pergunta": "O aluno sabe ler CHINÊS?"
+}

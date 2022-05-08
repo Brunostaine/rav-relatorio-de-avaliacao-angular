@@ -1,6 +1,6 @@
 export interface List {
   _id: string
-  name: string
-  course: string
+  nome: string
+  turma: string
 
 }
