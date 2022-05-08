@@ -21,7 +21,7 @@ export class AddAlunoComponent implements OnInit {
     private addAlunoService: AddAlunoService,
     private router: Router,
     private fb: FormBuilder,
-    private http: HttpClient
+    
   ) {}
 
   // Formulario reativo

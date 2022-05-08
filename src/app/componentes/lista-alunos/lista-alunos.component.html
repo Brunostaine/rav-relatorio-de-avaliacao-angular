@@ -10,30 +10,26 @@
     </button>
   </mat-toolbar>
 
-  <div *ngIf="list$ | async as lista; else spinner">
-    <table mat-table [dataSource]="lista" class="mat-elevation-z8">
-      <!-- name do aluno Column -->
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef>Nome do Aluno</th>
-        <td mat-cell *matCellDef="let list" (click)="edit()">{{ list.nome }}</td>
-      </ng-container>
-      <!-- course da turma Column -->
-      
+  <table class="table" >
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Aluno</th>
+        <th scope="col">Turma</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
 
-      <ng-container matColumnDef="course">
-        <th mat-header-cell *matHeaderCellDef>Turma</th>
-        <td mat-cell *matCellDef="let list">{{ list.turma }}</td>
-      </ng-container>
-
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-    </table>
-
-    
-  </div>
-  <ng-template #spinner>
-    <div class="spinner">
-      <mat-spinner></mat-spinner>
-    </div>
-  </ng-template>
+    <tbody *ngFor="let lista of listar">
+      <tr>
+        <th scope="row">{{ lista.id }}</th>
+        <td>{{ lista.nome }}</td>
+        <td>{{ lista.turma }}</td>
+        <td class="float-end">
+          <button class="btn btn-outline-warning mx-2">Editar</button>
+          <button class="btn btn-outline-danger">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </mat-card>

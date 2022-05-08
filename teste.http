@@ -2,6 +2,10 @@ http://localhost:3000/perguntas
 
 ###
 
+http://localhost:3000/Alunos
+
+###
+
 POST http://localhost:3000/perguntas HTTP/1.1
 content-type: application/json
 
