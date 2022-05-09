@@ -16,5 +16,16 @@ export class ListaAlunosService {
   editarAluno(){
     console.log('editando um aluno')
   }
+
+  deletarRelatorio(){
+    // Preciso colocar o id dinamico para poder excluir 
+    this.httpClient.delete<any>(`${this.API}/`).subscribe({
+      next: (resp) => {
+        console.log(resp)
+      }
+    })
+    
+  }
+
   
 }

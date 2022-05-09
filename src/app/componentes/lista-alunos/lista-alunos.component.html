@@ -1,35 +1,35 @@
-<mat-card>
-  <mat-toolbar color="primary" class="toobar-display">
-    Lista de alunos
-    <button
-      routerLink="add-aluno"
-      class="link-add btn btn-light"
-      style="color: rgb(20, 19, 37)"
-    >
+<nav class="container navbar navbar-expand-lg navbar-dark bg-primary my-2">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Lista de alunos</a>
+    <button routerLink="add-aluno" class="link-add btn btn-outline-dark">
       Novo
     </button>
-  </mat-toolbar>
+  </div>
+</nav>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Aluno</th>
-        <th scope="col">Turma</th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Aluno</th>
+      <th scope="col">Turma</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
 
-    <tbody>
-      <tr *ngFor="let lista of listar">
-        <th scope="row">{{ lista.id }}</th>
-        <td>{{ lista.nome }}</td>
-        <td>{{ lista.turma }}</td>
-        <td class="float-end">
-          <button class="btn btn-outline-primary mx-2" (click)="verRelatorio()">Visualizar</button>
-          <button class="btn btn-outline-danger">Excluir</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</mat-card>
+  <tbody>
+    <tr *ngFor="let lista of listar">
+      <th scope="row">{{ lista.id }}</th>
+      <td>{{ lista.nome }}</td>
+      <td>{{ lista.turma }}</td>
+      <td class="float-end">
+        <button class="btn btn-outline-primary mx-2" (click)="verRelatorio()">
+          Visualizar
+        </button>
+        <button class="btn btn-outline-danger" (click)="deleteRelatorio()">
+          Excluir
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,8 +1,8 @@
-<mat-card class="teste">
-  <mat-toolbar color="primary">
-    <span>Gerar novo formulário</span>
-  </mat-toolbar>
-</mat-card>
+<nav class="container navbar navbar-expand-lg navbar-dark bg-primary my-2">
+  <div class="container-fluid">
+    <h2 style="color: #fff">Gerar novo formulário</h2>
+  </div>
+</nav>
 
 <!-- Nome e Turma -->
 
@@ -20,13 +20,8 @@
       </div>
 
       <div class="col my-2">
-        <select
-          class="form-select"
-          aria-label="Turma"
-          formControlName="turma"
-        >
-        
-          <option *ngFor="let turma of turmas" class="form-control" >
+        <select class="form-select" aria-label="Turma" formControlName="turma">
+          <option *ngFor="let turma of turmas" class="form-control">
             {{ turma.turma }}
           </option>
         </select>

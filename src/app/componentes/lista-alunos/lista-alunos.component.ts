@@ -25,4 +25,8 @@ export class ListaAlunosComponent implements OnInit {
   verRelatorio(){
     this.router.navigate(['/form'])
   }
+
+  deleteRelatorio(){
+    this.listaAlunosService.deletarRelatorio()
+  }
 }
