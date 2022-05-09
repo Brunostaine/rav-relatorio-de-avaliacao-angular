@@ -6,12 +6,12 @@ import { Injectable } from '@angular/core';
 })
 export class AlunoFormService {
 
-  private readonly FORM = 'http://localhost:3000/Alunos';
+  private readonly API = 'http://localhost:3000';
 
   constructor(private http: HttpClient) { }
 
   buscarFormulario(){
     // precisa do id pra colocar 
-    return this.http.get<any>(`${this.FORM}`)
+    return this.http.get<any>(`${this.API}/Alunos`)
   }
 }

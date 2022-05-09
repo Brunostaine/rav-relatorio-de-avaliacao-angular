@@ -5,12 +5,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ListaAlunosService {
-  private readonly API = 'http://localhost:3000/Alunos';
+  private readonly API = 'http://localhost:3000';
 
   constructor(private httpClient: HttpClient) {}
 
   list() {
-    return this.httpClient.get<any>(this.API)
+    return this.httpClient.get<any>(`${this.API}/Alunos`)
   }
 
   editarAluno(){

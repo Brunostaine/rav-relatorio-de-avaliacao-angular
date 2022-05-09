@@ -6,21 +6,20 @@ import { take } from 'rxjs';
   providedIn: 'root',
 })
 export class AddAlunoService {
-  private readonly API = 'http://localhost:3000/perguntas';
-  private readonly TURMA = 'http://localhost:3000/turmas';
-  private readonly FORM = 'http://localhost:3000/Alunos';
+  private readonly API = 'http://localhost:3000';
+  
 
   constructor(private HttpClient: HttpClient) {}
 
   listarQuestoes() {
-    return this.HttpClient.get<any>(this.API);
+    return this.HttpClient.get<any>(`${this.API}/perguntas`);
   }
 
   listarTurmas(){
-    return this.HttpClient.get<any>(this.TURMA)
+    return this.HttpClient.get<any>(`${this.API}/turmas`)
   }
 
   SubmitFormulario(form: any){
-    return this.HttpClient.post<any>(this.FORM, form).pipe(take(1))
+    return this.HttpClient.post<any>(`${this.API}/Alunos`, form).pipe(take(1))
   }
 }
