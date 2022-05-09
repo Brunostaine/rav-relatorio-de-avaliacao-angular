@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlunoFormService } from './aluno-form.service';
 
 @Component({
   selector: 'app-aluno-form',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlunoFormComponent implements OnInit {
 
-  constructor() { }
+  alunoForms = []
+
+  constructor(private alunoFormService: AlunoFormService) { }
 
   ngOnInit(): void {
+    this.alunoFormService.buscarFormulario().subscribe({
+      next: (resp) => {
+        console.log(resp)
+        
+      },
+    });
+
+    
   }
 
 }
