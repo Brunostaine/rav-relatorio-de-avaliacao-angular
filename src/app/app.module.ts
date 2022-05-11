@@ -10,6 +10,7 @@ import { ListaAlunosComponent } from './componentes/lista-alunos/lista-alunos.co
 import { HomeModule } from './home/home/home.module';
 import { AppMaterialModule } from './shared/app-material/app-material.module';
 import { AlunoFormComponent } from './componentes/aluno-form/aluno-form.component';
+import { AlunoFormModule } from './componentes/aluno-form/aluno-form.module';
 
 @NgModule({
   declarations: [AppComponent, ListaAlunosComponent, AlunoFormComponent, ],
@@ -21,7 +22,8 @@ import { AlunoFormComponent } from './componentes/aluno-form/aluno-form.componen
     CommonModule,
     AppMaterialModule,
     ReactiveFormsModule,
-    AddAlunoModule
+    AddAlunoModule,
+    AlunoFormModule
   ],
   providers: [],
   bootstrap: [AppComponent],
