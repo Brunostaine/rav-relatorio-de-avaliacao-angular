@@ -29,26 +29,27 @@
 
       <!-- Perguntas do Formulário -->
 
-      <div class="example-form" *ngFor="let lista of listar">
+      <div class="example-form" *ngFor="let lista of listarPerguntas">
         <div class="form-control">
-          <mat-label style="font-weight: 700"> {{ lista.pergunta }}</mat-label>
-          <div>
-            <mat-radio-group aria-label="selecione uma opção">
-              <mat-radio-button
-                class="radio-btn"
-                value="1"
-                style="margin-right: 16px"
-                >Sim</mat-radio-button
-              >
-              <mat-radio-button class="radio-btn" value="2"
-                >Não</mat-radio-button
-              >
-            </mat-radio-group>
+          <div class="row">
+            <h3 class="row">
+              {{lista.id }}
+              {{ lista.pergunta }}
+            </h3>
+
+            <div class="row-sm-1" *ngFor="let item of radioButtonOpcoes">
+              <label class="col-1">
+                <input type="radio"  [value]="item.valor" formControlName="perguntas"/>
+                {{ item.desc }}
+              </label>
+            </div>
+
           </div>
         </div>
       </div>
     </div>
   </div>
+
   <div class="container">
     <div class="float-end">
       <button type="submit" class="btn btn-outline-success mx-2">Submit</button>
@@ -60,3 +61,5 @@
 </form>
 
 <ng-template #LoadingTemplate> carregando ... </ng-template>
+
+<app-form-debug [form]="formulario"></app-form-debug>

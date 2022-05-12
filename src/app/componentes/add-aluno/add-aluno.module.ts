@@ -4,19 +4,21 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppMaterialModule } from 'src/app/shared/app-material/app-material.module';
 
+import { SharedModule } from '../shared/shared.module';
 import { AddAlunoComponent } from './add-aluno.component';
 
 
 
 @NgModule({
   declarations: [
-    AddAlunoComponent
+    AddAlunoComponent, 
   ],
   imports: [
     CommonModule,
     AppMaterialModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ]
 })
 export class AddAlunoModule { }

@@ -9,7 +9,9 @@ import { ListaAlunosService } from './service/lista-alunos.service';
   styleUrls: ['./lista-alunos.component.css'],
 })
 export class ListaAlunosComponent implements OnInit {
-  listar: any;
+
+  listar: any = []
+  perguntas: any = []
 
   constructor(private listaAlunosService: ListaAlunosService, private router: Router) {}
 
@@ -20,6 +22,13 @@ export class ListaAlunosComponent implements OnInit {
         // console.log(resp)
       },
     });
+
+    this.listaAlunosService.listarPerguntas().subscribe({
+      next: (resp => {
+        this.perguntas = resp;
+        // console.log(resp)
+      })
+    })
   }
 
   verRelatorio(){

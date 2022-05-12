@@ -13,6 +13,10 @@ export class ListaAlunosService {
     return this.httpClient.get<any>(`${this.API}/Alunos`)
   }
 
+  listarPerguntas(){
+    return this.httpClient.get<any>(`${this.API}/perguntas`)
+  }
+
   editarAluno(){
     console.log('editando um aluno')
   }

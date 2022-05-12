@@ -6,14 +6,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddAlunoModule } from './componentes/add-aluno/add-aluno.module';
+import { AlunoFormModule } from './componentes/aluno-form/aluno-form.module';
 import { ListaAlunosComponent } from './componentes/lista-alunos/lista-alunos.component';
 import { HomeModule } from './home/home/home.module';
 import { AppMaterialModule } from './shared/app-material/app-material.module';
-import { AlunoFormComponent } from './componentes/aluno-form/aluno-form.component';
-import { AlunoFormModule } from './componentes/aluno-form/aluno-form.module';
+
 
 @NgModule({
-  declarations: [AppComponent, ListaAlunosComponent, AlunoFormComponent, ],
+  declarations: [AppComponent, ListaAlunosComponent],
   imports: [
 
     AppRoutingModule,
@@ -23,9 +23,11 @@ import { AlunoFormModule } from './componentes/aluno-form/aluno-form.module';
     AppMaterialModule,
     ReactiveFormsModule,
     AddAlunoModule,
-    AlunoFormModule
+    AlunoFormModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],
+  exports: []
 })
 export class AppModule {}
