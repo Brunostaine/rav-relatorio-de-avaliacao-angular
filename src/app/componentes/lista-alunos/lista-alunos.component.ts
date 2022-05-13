@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { ListaAlunosService } from './service/lista-alunos.service';
+import { ListaAlunosService } from './lista-alunos.service';
 
 @Component({
   selector: 'app-lista-alunos',

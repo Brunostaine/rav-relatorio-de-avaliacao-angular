@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
-import { AddAlunoService } from '../add-aluno/service/add-aluno.service';
+import { AddAlunoService } from '../add-aluno/add-aluno.service';
 import { ListForm } from './aluno-form';
 import { AlunoFormService } from './aluno-form.service';
 

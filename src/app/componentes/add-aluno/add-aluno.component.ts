@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { AddAlunoService } from './service/add-aluno.service';
+import { AddAlunoService } from './add-aluno.service';
 
 @Component({
   selector: 'app-add-aluno',
