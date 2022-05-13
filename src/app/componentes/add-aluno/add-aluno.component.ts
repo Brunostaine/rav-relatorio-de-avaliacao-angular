@@ -39,7 +39,7 @@ export class AddAlunoComponent implements OnInit {
       perguntas: [null, [Validators.required]],
     });
 
-    console.log(this.formulario);
+    // console.log(this.formulario);
 
     // Radio button opções
 
@@ -72,13 +72,14 @@ export class AddAlunoComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.formulario.value);
+    // console.log(this.formulario.value);
 
     if (
       this.formulario.valid &&
       this.formulario.touched &&
       this.formulario.value.turma !== 'Selecione uma turma'
-    ) {
+    ) 
+    {
       this.addAlunoService.create(this.formulario.value).subscribe({
         next: () => {
           alert('Foi adicionado um novo relatório');
@@ -95,7 +96,7 @@ export class AddAlunoComponent implements OnInit {
     }
 
     this.addAlunoService.emitirRelatorioCriado.subscribe(
-      (this.listarPerguntas = console.log(this.formulario))
+      (this.listarPerguntas = this.formulario)
     );
   }
 
