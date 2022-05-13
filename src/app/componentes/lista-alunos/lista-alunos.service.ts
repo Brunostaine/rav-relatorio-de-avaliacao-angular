@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +12,7 @@ export class ListaAlunosService {
 
   private id = this
 
-  constructor(private httpClient: HttpClient, private route: ActivatedRoute) {}
+  constructor(private httpClient: HttpClient, private route: ActivatedRoute, private router: Router) {}
 
 
 
@@ -39,6 +39,8 @@ export class ListaAlunosService {
     this.httpClient.delete<any>(`${this.API}/Alunos/${id}`  ).subscribe({
       next: (resp) => {
         console.log(resp) 
+        alert('Curso excluido com sucesso')
+        
       },
       error: ()=> {
         alert('Erro ao remover curso, tente mais tarde.')

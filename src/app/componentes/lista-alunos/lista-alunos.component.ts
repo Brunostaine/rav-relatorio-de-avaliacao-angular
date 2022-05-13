@@ -42,9 +42,13 @@ export class ListaAlunosComponent implements OnInit {
 
   deleteRelatorio(id: any) {
     this.listaAlunosService.deletarRelatorio(id)
-    
-    
-
+    this.listaAlunosService.list().subscribe({
+      next: (resp) =>{
+        this.listar = resp
+      }
+    }
+     
+    )
     
     // console.log("To pegando o lista: ",id)
   }

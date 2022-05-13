@@ -39,24 +39,6 @@
       "id": 3,
       "nome": "Mario Alcantara",
       "turma": "8B"
-    },
-    {
-      "nome": "teste",
-      "turma": null,
-      "perguntas": null,
-      "id": 4
-    },
-    {
-      "nome": "teste",
-      "turma": null,
-      "perguntas": null,
-      "id": 5
-    },
-    {
-      "nome": "teste",
-      "turma": null,
-      "perguntas": null,
-      "id": 6
     }
   ],
   "turmas": [
