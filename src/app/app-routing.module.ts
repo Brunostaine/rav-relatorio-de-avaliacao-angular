@@ -15,6 +15,7 @@ const routes: Routes = [
 
       { path: 'add-aluno', component: AddAlunoComponent },
       { path: 'form/:id', component: AlunoFormComponent },
+      { path: 'edit/:id', component: AlunoFormComponent },
     ],
   },
 ];
