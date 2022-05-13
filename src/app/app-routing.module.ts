@@ -14,7 +14,7 @@ const routes: Routes = [
       { path: '', component: ListaAlunosComponent },
 
       { path: 'add-aluno', component: AddAlunoComponent },
-      { path: 'form', component: AlunoFormComponent },
+      { path: 'form/:id', component: AlunoFormComponent },
     ],
   },
 ];

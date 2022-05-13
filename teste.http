@@ -13,3 +13,8 @@ content-type: application/json
       
       "pergunta": "O aluno sabe ler CHINÊS?"
 }
+
+###
+
+DELETE http://localhost:3000/Alunos/7 HTTP/1.1
+content-type: application/json

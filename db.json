@@ -41,25 +41,22 @@
       "turma": "8B"
     },
     {
-      "nome": "BRUNO",
-      "turma": "8a",
+      "nome": "teste",
+      "turma": null,
+      "perguntas": null,
       "id": 4
     },
     {
-      "nome": "Amanda",
-      "turma": "8C",
+      "nome": "teste",
+      "turma": null,
+      "perguntas": null,
       "id": 5
     },
     {
-      "nome": "João",
-      "turma": "8B",
+      "nome": "teste",
+      "turma": null,
+      "perguntas": null,
       "id": 6
-    },
-    {
-      "nome": "asss",
-      "turma": "8C",
-      "perguntas": "n",
-      "id": 7
     }
   ],
   "turmas": [

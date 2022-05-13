@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { ListaAlunosService } from './lista-alunos.service';
 
@@ -9,11 +9,14 @@ import { ListaAlunosService } from './lista-alunos.service';
   styleUrls: ['./lista-alunos.component.css'],
 })
 export class ListaAlunosComponent implements OnInit {
+  listar: any = [];
+  perguntas: any = [];
 
-  listar: any = []
-  perguntas: any = []
-
-  constructor(private listaAlunosService: ListaAlunosService, private router: Router) {}
+  constructor(
+    private listaAlunosService: ListaAlunosService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.listaAlunosService.list().subscribe({
@@ -24,18 +27,25 @@ export class ListaAlunosComponent implements OnInit {
     });
 
     this.listaAlunosService.listarPerguntas().subscribe({
-      next: (resp => {
+      next: (resp) => {
         this.perguntas = resp;
         // console.log(resp)
-      })
-    })
+      },
+    });
   }
 
-  verRelatorio(){
-    this.router.navigate(['/form'])
+  
+
+  verRelatorio(id: any) {
+    this.router.navigate(['form', id], {relativeTo: this.route});
   }
 
-  deleteRelatorio(){
-    this.listaAlunosService.deletarRelatorio()
+  deleteRelatorio(id: any) {
+    this.listaAlunosService.deletarRelatorio(id)
+    
+    
+
+    
+    // console.log("To pegando o lista: ",id)
   }
 }
