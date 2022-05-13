@@ -43,6 +43,10 @@
   ],
   "turmas": [
     {
+      "id": 0,
+      "turma": "Selecione uma turma"
+    },
+    {
       "id": 1,
       "turma": "8A"
     },

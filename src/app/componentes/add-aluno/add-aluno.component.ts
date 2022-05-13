@@ -44,7 +44,7 @@ export class AddAlunoComponent implements OnInit {
     // Radio button opções
 
     this.radioButtonOpcoes = this.addAlunoService.radioButton();
-    console.log(this.radioButtonOpcoes);
+    // console.log(this.radioButtonOpcoes);
 
     // Lista as perguntas
     this.isLoading = true;
@@ -74,8 +74,26 @@ export class AddAlunoComponent implements OnInit {
   onSubmit() {
     console.log(this.formulario.value);
 
-    this.addAlunoService.SubmitFormulario(this.formulario.value).subscribe();
-    this.router.navigate(['']);
+    if (
+      this.formulario.valid &&
+      this.formulario.touched &&
+      this.formulario.value.turma !== 'Selecione uma turma'
+    ) {
+      this.addAlunoService.SubmitFormulario(this.formulario.value).subscribe({
+        next: () => {
+          alert('Foi adicionado um novo relatório');
+        },
+        error: (erro) => {
+          alert(erro);
+        },
+      });
+      this.router.navigate(['']);
+    } else {
+      alert('Seu relatório possui informações inválidas, tente novamente.');
+
+      
+      this.listarPerguntas();
+    }
 
     this.addAlunoService.emitirRelatorioCriado.subscribe(
       (this.listarPerguntas = console.log(this.formulario))

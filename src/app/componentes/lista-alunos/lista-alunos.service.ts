@@ -38,7 +38,7 @@ export class ListaAlunosService {
     // Preciso colocar o id dinamico para poder excluir 
     this.httpClient.delete<any>(`${this.API}/Alunos/${id}`  ).subscribe({
       next: (resp) => {
-        console.log(resp) 
+        // console.log(resp) 
         alert('Curso excluido com sucesso')
         
       },

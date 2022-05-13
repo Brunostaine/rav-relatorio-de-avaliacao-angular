@@ -20,8 +20,10 @@
       </div>
 
       <div class="col my-2">
-        <select class="form-select" aria-label="Turma" formControlName="turma">
-          <option *ngFor="let turma of turmas" class="form-control">
+        <select class="form-select" aria-label="Turma" formControlName="turma" >
+          
+          <option  *ngFor="let turma of turmas" class="form-control">
+             
             {{ turma.turma }}
           </option>
         </select>
