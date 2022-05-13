@@ -20,7 +20,7 @@ export class AddAlunoService {
     return this.HttpClient.get<any>(`${this.API}/turmas`);
   }
 
-  SubmitFormulario(form: any) {
+  create(form: any) {
     return this.HttpClient.post<any>(`${this.API}/Alunos`, form).pipe(take(1));
   }
 

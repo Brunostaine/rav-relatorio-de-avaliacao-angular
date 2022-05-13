@@ -79,7 +79,7 @@ export class AddAlunoComponent implements OnInit {
       this.formulario.touched &&
       this.formulario.value.turma !== 'Selecione uma turma'
     ) {
-      this.addAlunoService.SubmitFormulario(this.formulario.value).subscribe({
+      this.addAlunoService.create(this.formulario.value).subscribe({
         next: () => {
           alert('Foi adicionado um novo relatório');
         },
@@ -91,7 +91,6 @@ export class AddAlunoComponent implements OnInit {
     } else {
       alert('Seu relatório possui informações inválidas, tente novamente.');
 
-      
       this.listarPerguntas();
     }
 

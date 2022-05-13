@@ -12,6 +12,8 @@ export class ListaAlunosComponent implements OnInit {
   listar: any = [];
   perguntas: any = [];
 
+  formularioAluno: any = [];
+
   constructor(
     private listaAlunosService: ListaAlunosService,
     private router: Router,
@@ -34,22 +36,25 @@ export class ListaAlunosComponent implements OnInit {
     });
   }
 
-  
-
   verRelatorio(id: any) {
-    this.router.navigate(['edit', id], {relativeTo: this.route});
+    this.router.navigate(['edit', id], { relativeTo: this.route });
+
+    this.listaAlunosService.editarFormulario(id).subscribe({
+      next: (resposta) => {
+        console.log(resposta);
+        this.formularioAluno = resposta;
+      },
+    });
   }
 
   deleteRelatorio(id: any) {
-    this.listaAlunosService.deletarRelatorio(id)
+    this.listaAlunosService.deletarRelatorio(id);
     this.listaAlunosService.list().subscribe({
-      next: (resp) =>{
-        this.listar = resp
-      }
-    }
-     
-    )
-    
+      next: (resp) => {
+        this.listar = resp;
+      },
+    });
+
     // console.log("To pegando o lista: ",id)
   }
 }

@@ -12,12 +12,22 @@ export class AlunoFormService {
 
   constructor(private http: HttpClient) { }
 
-  buscarFormulario(){
-    // precisa do id pra colocar 
-    return this.http.get<any>(`${this.API}/Alunos`)
-  }
+  // buscarFormulario(){
+  //   // precisa do id pra colocar 
+  //   return this.http.get<any>(`${this.API}/Alunos/`).subscribe({
+  //     next: (resp) => {
+  //       console.log(resp)
+
+  //       let teste = resp
+  //       console.log(teste)
+  //     }
+
+  //   })
+  // }
 
   submitFormulario(form:ListForm){
     return this.http.post<ListForm>(`${this.API}`, form).pipe(take(1))
   }
 }
+
+
