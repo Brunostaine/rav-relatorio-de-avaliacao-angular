@@ -11,7 +11,7 @@ const routes: Routes = [
     path: '',
     component: HomeComponent,
     children: [
-      { path: '', component: ListaAlunosComponent },
+      { path: 'alunos', component: ListaAlunosComponent },
 
       { path: 'add-aluno', component: AddAlunoComponent },
       { path: 'form', component: AddAlunoComponent },

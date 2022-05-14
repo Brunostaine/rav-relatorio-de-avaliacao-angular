@@ -37,7 +37,7 @@ export class ListaAlunosComponent implements OnInit {
   }
 
   verRelatorio(id: any) {
-    this.router.navigate(['edit', id], { relativeTo: this.route });
+    this.router.navigate(['edit', id]);
 
     this.listaAlunosService.editarFormulario(id).subscribe({
       next: (resposta) => {
