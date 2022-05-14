@@ -9,24 +9,18 @@ import { AddAlunoModule } from './componentes/add-aluno/add-aluno.module';
 import { ListaAlunosComponent } from './componentes/lista-alunos/lista-alunos.component';
 import { HomeModule } from './home/home/home.module';
 
-
-
 @NgModule({
   declarations: [AppComponent, ListaAlunosComponent],
   imports: [
-
     AppRoutingModule,
     HttpClientModule,
     HomeModule,
     CommonModule,
-    
     ReactiveFormsModule,
     AddAlunoModule,
-    
-    
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: []
+  exports: [],
 })
 export class AppModule {}
