@@ -6,6 +6,9 @@
 /out-tsc
 /bazel-out
 
+# Backend fake
+/db.json
+
 # Node
 /node_modules
 npm-debug.log
@@ -43,3 +46,6 @@ Thumbs.db
 
 # comandos
 /comandos.md
+
+# testes
+/teste.http
