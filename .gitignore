@@ -10,7 +10,7 @@
 /node_modules
 npm-debug.log
 yarn-error.log
-db.json
+
 
 # IDEs and editors
 .idea/
@@ -46,6 +46,9 @@ Thumbs.db
 
 # comandos
 comandos.md
+anotacoes
+db.json
+proxy.config.js
 
 # testes
 teste.http
