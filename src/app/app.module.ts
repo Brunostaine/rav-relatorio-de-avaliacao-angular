@@ -6,10 +6,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddAlunoModule } from './componentes/add-aluno/add-aluno.module';
-import { AlunoFormModule } from './componentes/aluno-form/aluno-form.module';
 import { ListaAlunosComponent } from './componentes/lista-alunos/lista-alunos.component';
 import { HomeModule } from './home/home/home.module';
-import { AppMaterialModule } from './shared/app-material/app-material.module';
+
 
 
 @NgModule({
@@ -20,10 +19,10 @@ import { AppMaterialModule } from './shared/app-material/app-material.module';
     HttpClientModule,
     HomeModule,
     CommonModule,
-    AppMaterialModule,
+    
     ReactiveFormsModule,
     AddAlunoModule,
-    AlunoFormModule,
+    
     
   ],
   providers: [],
