@@ -6,13 +6,11 @@
 /out-tsc
 /bazel-out
 
-# Backend fake
-/db.json
-
 # Node
 /node_modules
 npm-debug.log
 yarn-error.log
+db.json
 
 # IDEs and editors
 .idea/
@@ -44,8 +42,12 @@ testem.log
 .DS_Store
 Thumbs.db
 
+*/.comandos
+
 # comandos
-/comandos.md
+comandos.md
 
 # testes
-/teste.http
+teste.http
+
+
