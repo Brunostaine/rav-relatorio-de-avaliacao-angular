@@ -8,10 +8,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddAlunoModule } from './componentes/add-aluno/add-aluno.module';
 import { ListaAlunosComponent } from './componentes/lista-alunos/lista-alunos.component';
-import { HomeModule } from './home/home/home.module';
+import { HomeModule } from './pages/home/home.module';
+import { NavbarComponent } from './pages/navbar/navbar.component';
+
 
 @NgModule({
-  declarations: [AppComponent, ListaAlunosComponent],
+  declarations: [AppComponent, ListaAlunosComponent, NavbarComponent],
   imports: [
     AppRoutingModule,
     HttpClientModule,
