@@ -19,8 +19,19 @@ h3 {
     min-width: 250px;
     max-width: 250px;
     min-height: 100vh;
+    transition: 1s;
 }
 
-/* .sidebar.active {
+.sidebar-off{
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
     margin-left: -250px;
-} */
+    transition: 1s;
+}
+
+.offcanvas-start{
+    transition: 1s;
+    height: 100vh;
+    max-width: 250px;
+}
