@@ -1,46 +1,19 @@
-.nav-top {
-    padding: 5px;
-    border-bottom: 2px solid gray;
-    height: 60px;
-}
-
-.icone-menu{
-    padding: 10px;
-    margin-left: 30px;
-}
-
-.sidebar-close{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-
-
-h3 {
+.titulo-menu {
     color: var(--NomeTitle);
-    font-family: Helvetica;
+    font-family: arial;
     font-size: 2rem;
-    
-    
     padding: 2px;
-    display: flex;
-    
+    display: flex;   
+    justify-content: center;
+    padding-top: 10px;
 }
-
 .sidebar {
     
     min-width: 250px;
     max-width: 250px;
     min-height: 100vh;
     transition: 1s;
+    
 }
 
-.sidebar-off{
-    min-width: 250px;
-    max-width: 250px;
-    min-height: 100vh;
-    margin-left: -250px;
-    transition: 1s;
-}
 

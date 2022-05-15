@@ -1,25 +1,19 @@
-        <nav class="nav-top navbar-dark bg-primary">
-            <div class="bg-primary icone-menu" type="button" (click)="onClick()">
-                    <div *ngIf="!menuAtivo; desativado ">
-                        <span #desativado class="navbar-toggler-icon"></span>
-                    </div>
-            </div>
-        </nav>
+        
 
-<nav class="navbar-dark bg-primary" [ngClass]="{'sidebar-off': !menuAtivo, 'sidebar': menuAtivo}">
-        <div class="sidebar-close" (click)="onClick()">
-            <h3 routerLink="" class=" row-6">Menu</h3> 
-
-            <div *ngIf="menuAtivo; ativado ">
-                <span #ativado class="btn-close navbar-light"></span>
-            </div>
+<nav class="navbar-dark bg-primary sidebar" >
+    <div class="sidebar-close" (click)="onClick()">
+        <h3 routerLink="" class="titulo-menu">Menu</h3> 
+    
+        <div *ngIf="menuAtivo; ativado ">
+            <span #ativado class="btn-close navbar-light"></span>
         </div>
+    </div>
     
     
         <div class="container-fluid">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" routerLink="alunos"
+                        <a class="nav-link active" aria-current="page" routerLink=""
                             >Home</a>
                     </li>
                     <li class="nav-item">
