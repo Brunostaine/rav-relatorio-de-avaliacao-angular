@@ -1,16 +1,20 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+
 import { FormDebugComponent } from '../form-debug/form-debug.component';
 
 
 
 @NgModule({
-  declarations: [ FormDebugComponent],
+  declarations: [FormDebugComponent],
   imports: [
     CommonModule
   ],
   exports: [
     FormDebugComponent
-  ]
+  ],
+  
+
+  
 })
 export class SharedModule { }

@@ -27,6 +27,7 @@
               "src/assets"
             ],
             "styles": [
+              "./src/app/componentes/shared/cores/cores.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
