@@ -4,11 +4,13 @@ import { AddAlunoComponent } from 'src/app/componentes/add-aluno/add-aluno.compo
 import { AlunoFormComponent } from 'src/app/componentes/aluno-form/aluno-form.component';
 import { ListaAlunosComponent } from 'src/app/componentes/lista-alunos/lista-alunos.component';
 
-import { NavbarComponent } from '../navbar/navbar.component';
+import { NavbarComponent } from './../navbar/navbar.component';
+import { HomeComponent } from './home.component';
 
 const routes: Routes = [
-    {path: '', component: NavbarComponent,
+    {path: '', component: HomeComponent,
         children: [
+            {path: '', component: NavbarComponent},
             { path: 'alunos', component: ListaAlunosComponent },
             { path: 'add-aluno', component: AddAlunoComponent },
             { path: 'form', component: AddAlunoComponent },

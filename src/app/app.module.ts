@@ -10,11 +10,10 @@ import { AddAlunoModule } from './componentes/add-aluno/add-aluno.module';
 import { ListaAlunosComponent } from './componentes/lista-alunos/lista-alunos.component';
 import { SharedModule } from './componentes/shared/shared.module';
 import { HomeModule } from './pages/home/home.module';
-import { NavbarComponent } from './pages/navbar/navbar.component';
 
 
 @NgModule({
-  declarations: [AppComponent, ListaAlunosComponent, NavbarComponent, ],
+  declarations: [AppComponent, ListaAlunosComponent,  ],
   imports: [
     CommonModule,
     BrowserModule,
