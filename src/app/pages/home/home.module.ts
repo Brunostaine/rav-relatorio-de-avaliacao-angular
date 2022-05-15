@@ -1,3 +1,4 @@
+import { HeaderComponent } from './../header/header.component';
 import { NavbarComponent } from './../navbar/navbar.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -8,7 +9,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 
 @NgModule({
-  declarations: [HomeComponent, NavbarComponent],
+  declarations: [HomeComponent, NavbarComponent, HeaderComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
