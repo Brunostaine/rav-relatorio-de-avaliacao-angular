@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  menuAtivo: boolean = false;
+  
+  onClick(){
+    this.menuAtivo = !this.menuAtivo;
+    console.log(this.menuAtivo)
+  }
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+ 
 
 }

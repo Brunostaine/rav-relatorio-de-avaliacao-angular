@@ -1,5 +1,26 @@
-h1 {
+nav {
+    padding: 5px;
+}
+
+h3 {
     color: var(--NomeTitle);
     font-family: Helvetica;
     font-size: 2rem;
+    margin: 0 auto;
+    
+    
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
 }
+
+.sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+}
+
+/* .sidebar.active {
+    margin-left: -250px;
+} */
