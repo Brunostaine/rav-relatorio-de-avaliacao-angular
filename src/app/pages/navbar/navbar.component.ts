@@ -11,7 +11,7 @@ export class NavbarComponent implements OnInit {
   
   onClick(){
     this.menuAtivo = !this.menuAtivo;
-    console.log(this.menuAtivo)
+    
   }
 
   constructor() { }

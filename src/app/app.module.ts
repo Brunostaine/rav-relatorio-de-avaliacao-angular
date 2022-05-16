@@ -1,3 +1,5 @@
+import { HomeComponent } from './pages/home/home.component';
+import { NavbarModule } from './pages/navbar/navbar.module';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -13,7 +15,7 @@ import { HomeModule } from './pages/home/home.module';
 
 
 @NgModule({
-  declarations: [AppComponent, ListaAlunosComponent,  ],
+  declarations: [AppComponent, ListaAlunosComponent,],
   imports: [
     CommonModule,
     BrowserModule,
@@ -23,6 +25,7 @@ import { HomeModule } from './pages/home/home.module';
     SharedModule,
     
     HomeModule,
+    NavbarModule,
     AddAlunoModule,
   ],
   providers: [],
